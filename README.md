@@ -11,3 +11,6 @@ This type of work is stored in the Assignments portion
 We also have a few things that we have to make ourselves and tend to be a bit bigger/more extensive and written completely on 
 our own. 
 This type of work is stored in the Projects portion
+
+Most of the files in this repository are not dependent on eachother, the only time a file will be dependent on others
+is when a project has a folder of its own.
