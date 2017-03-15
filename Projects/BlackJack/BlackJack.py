@@ -21,13 +21,13 @@ def blackJack():
     oppHand = []  # create the opponents hand
 
     # Adding cards to the deck
-    for i in range(1, 15):
+    for i in range(2, 15):
         deck.append(Cards.card(Suit.SPADES, i))
-    for i in range(1, 15):
+    for i in range(2, 15):
         deck.append(Cards.card(Suit.CLUBS, i))
-    for i in range(1, 15):
+    for i in range(2, 15):
         deck.append(Cards.card(Suit.HEARTS, i))
-    for i in range(1, 15):
+    for i in range(2, 15):
         deck.append(Cards.card(Suit.DIAMONDS, i))
 
     random.shuffle(deck)  # Randomly shuffle the deck
@@ -94,7 +94,7 @@ def blackJack():
                 sum += card.getValue()
             while sum < 21:
                 print("Your total is", sum)
-                hit = input("Do you want to hit (Y/N)")
+                hit = input("Do you want to hit (Y/N) ")
                 if hit.upper() == "Y":
                     try:
                         hand.append(deck[len(deck) - 1])
@@ -104,13 +104,13 @@ def blackJack():
                             hand[len(hand) - 1].prompt()
                     except:
                         print("ERROR")
-                        for i in range(1, 15):
+                        for i in range(2, 15):
                             deck.append(Cards.card(Suit.SPADES, i))
-                        for i in range(1, 15):
+                        for i in range(2, 15):
                             deck.append(Cards.card(Suit.CLUBS, i))
-                        for i in range(1, 15):
+                        for i in range(2, 15):
                             deck.append(Cards.card(Suit.HEARTS, i))
-                        for i in range(1, 15):
+                        for i in range(2, 15):
                             deck.append(Cards.card(Suit.DIAMONDS, i))
 
                         random.shuffle(deck)  # Randomly shuffle the deck
@@ -143,7 +143,7 @@ def blackJack():
                 print("The dealer got {}, but you got {}. YOU WIN!".format(oppSum, sum))
             elif sum < oppSum:
                 print("You got {}, but the dealer got {}. YOU LOSE!".format(sum, oppSum))
-            cont = input("Continue Playing? (Y/N)")
+            cont = input("Continue Playing? (Y/N) ")
             if cont.upper() == "N":
                 print("Thank you for playing!")
                 break
