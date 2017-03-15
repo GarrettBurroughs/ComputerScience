@@ -68,3 +68,10 @@ class card:
         elif self.cardId == 14:
             name = "Ace"
         return "{} of {}".format(name, suit)
+    def prompt(self):
+        ace = input("Do you want your Ace to be an Eleven(E) or a One(O)")
+        if ace.upper() == "E":
+            self.isEleven = True
+        elif ace.upper() == "O":
+            self.isEleven = False
+        self.updateValue()

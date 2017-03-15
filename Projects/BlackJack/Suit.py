@@ -1,4 +1,3 @@
-
 from enum import Enum
 class Suit(Enum):
     NULL = 0
